@@ -389,6 +389,7 @@ body {
   outline: none;
   border: none;
   padding: 8px 16px;
+  margin-top: 1rem;
   border-radius: 6px;
   background: var(--bg-secondary);
   cursor: pointer;
@@ -396,10 +397,12 @@ body {
 }
 #buttonSubmit:hover {
   background: var(--text-color);
+  box-shadow: var(--shadow);
 }
 
 .success {
   background-color: green !important;
+  color : white !important;
 }
 
 .error {

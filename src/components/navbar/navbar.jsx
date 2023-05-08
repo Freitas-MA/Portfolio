@@ -57,8 +57,8 @@ const Navbar = () => {
           </li>
 
           <li>
-            <a className="nav-link btn btn-primary" href="#">
-              RESUME <img src="{arrow}" alt="Arrow" />
+            <a id="resume" className="nav-link btn btn-primary" href="#">
+              RESUME <img id="arrow" src={arrow} alt="Arrow" />
             </a>
           </li>
 
