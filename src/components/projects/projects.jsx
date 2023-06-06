@@ -1,20 +1,19 @@
 import React from 'react';
 import { dataProjects } from './dataProjects';
 
-const Projects = ({ dataProjects }) => {
-
+const Projects = () => {
     return (
         <div className='project'>
-            {dataProjects.map((id, title, description, image, url) => (
-                <div className='flip-card' key={index}>
+            {dataProjects.map((item, index) => (
+                <div className='flip-card' key={item.id}>
                     <div className="flip-card-inner">
                         <div className="flip-card-front">
-                            <img src={image} alt="Avatar" style={{ width: '300px', height: '300px' }} />
+                            <img src={item.image} alt="Avatar" style={{ width: '300px', height: '300px' }} />
                         </div>
                         <div className="flip-card-back">
-                            <h1>{title}</h1>
-                            <p>{description}</p>
-                            <span>{url}</span>
+                            <h1>{item.title}</h1>
+                            <p>{item.description}</p>
+                            <span>{item.url}</span>
                         </div>
                     </div>
                 </div>
@@ -23,4 +22,4 @@ const Projects = ({ dataProjects }) => {
     )
 }
 
-export default Projects
+export default Projects;

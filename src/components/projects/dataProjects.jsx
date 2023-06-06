@@ -1,5 +1,3 @@
-import React from 'react'
-
 export const dataProjects = () => {
     const dataProjectsObj = [{
         id: 'Project1',
