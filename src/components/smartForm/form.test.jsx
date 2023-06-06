@@ -1,5 +1,6 @@
 import React from 'react';
 import { render, fireEvent, waitFor } from '@testing-library/react';
+import emailjs from 'emailjs-com'; // import emailjs library
 import Form from './form';
 
 jest.mock('emailjs-com', () => ({
