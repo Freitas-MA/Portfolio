@@ -1,23 +1,29 @@
-import React from 'react';
 import { dataProjects } from './dataProjects';
 
 const Projects = () => {
+    const projects = dataProjects(); // Call the dataProjects function to get the array of projects
+
     return (
-        <div className='project'>
-            {dataProjects.map((item, index) => (
+        <div id="projects">
+            <div className='project'>
+            {projects.map((item) => (
                 <div className='flip-card' key={item.id}>
                     <div className="flip-card-inner">
                         <div className="flip-card-front">
                             <img src={item.image} alt="Avatar" style={{ width: '300px', height: '300px' }} />
                         </div>
                         <div className="flip-card-back">
-                            <h1>{item.title}</h1>
-                            <p>{item.description}</p>
-                            <span>{item.url}</span>
+                            <img src={item.image} alt="background" />
+                            <div className="text-back">
+                                <h1>{item.title}</h1>
+                                <p>{item.description}</p>
+                                <a href={item.url} target="_blank" rel="noopener noreferrer">Live View</a>
+                            </div>
                         </div>
                     </div>
                 </div>
             ))}
+        </div>
         </div>
     )
 }

@@ -1,9 +1,9 @@
-import React, { useState, useEffect } from "react";
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { useState, useEffect } from "react";
 import devLogo from "../../assets/favicon/dev.svg";
 import moon from "../../assets/moon-regular.svg";
 import sun from "../../assets/sun-solid.svg";
-import arrow from "../../assets/arrow-right-solid.svg";
+import ModalCV from "../modal/ModalCV";
+
 
 const Navbar = () => {
   const [active, setActive] = useState(false);
@@ -36,13 +36,15 @@ const Navbar = () => {
       <div className="container">
         {/* <!-- Logo --> */}
         <h1 id="logo">
+          <a href="#hero">
           <img src={devLogo} alt="Developer Logo" />
+          </a>
         </h1>
         {/* <!-- Navbar links --> */}
         <ul className={`nav-menu ${active ? "active" : ""}`}>
           <li>
-            <a className="nav-link" href="/about" onClick={closeMenu}>
-              About-me
+            <a className="nav-link" href="#hero" onClick={closeMenu}>
+              About
             </a>
           </li>
           <li>
@@ -57,9 +59,7 @@ const Navbar = () => {
           </li>
 
           <li>
-            <a id="resume" className="nav-link btn btn-primary" href="#">
-              RESUME <img id="arrow" src={arrow} alt="Arrow Icon" />
-            </a>
+            <ModalCV />
           </li>
 
           {/* <!-- Toggle switch --> */}
