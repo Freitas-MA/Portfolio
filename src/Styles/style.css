@@ -278,7 +278,7 @@ body {
 /* This container is needed to position the front and back side */
 
 #projects {
-  height: 100vh;
+  height: max-content;
   width: 100%;
   max-width: 100%;
   padding: 0vh 20vw;
