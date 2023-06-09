@@ -394,7 +394,6 @@ body {
   justify-content: center;
   height: 70vh;
   background: var(--bg-primary);
-  margin-bottom: -20hv;
 }
 .contact-form {
   width: 100%;
