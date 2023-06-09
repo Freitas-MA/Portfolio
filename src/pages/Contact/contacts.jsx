@@ -1,4 +1,3 @@
-import React from 'react';
 import Form from '../../components/smartForm/form.jsx';
 
 export default function Contact() {

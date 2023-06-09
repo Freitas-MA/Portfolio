@@ -388,6 +388,9 @@ body {
 }
 
 /* New contact form  */
+#contact {
+  padding: 25vh 0 0 0;
+}
 .form {
   display: flex;
   align-items: center;
