@@ -392,7 +392,7 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  height: 70vh;
+  height: max-content;
   background: var(--bg-primary);
 }
 .contact-form {
