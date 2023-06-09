@@ -1,19 +1,17 @@
-import React from 'react'
 import homeGif from '../../assets/home.gif'
-
 
 export default function 
 Home
 () {
   return (
-    <div>
+    <div id='hero'>
        <section className="header-container">
       <img className="profile-image" src={homeGif} alt="" />
-      <h1>Hi I'm Marcos Freitas</h1>
+      <h1>Hi I&aposm Marcos Freitas</h1>
 
       <div className="content-text">
         <h2>Frontend Developer</h2>
-        <h3>I'm able to deal with your projects and deliver a very good result in a short time!</h3>
+        <h3>I&aposm able to deal with your projects and deliver a very good result in a short time!</h3>
 
         <p>
           Skilled and passionate web developer, I possess a solid foundation in HTML, CSS, and JavaScript, and excel at
