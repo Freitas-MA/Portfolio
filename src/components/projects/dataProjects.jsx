@@ -1,48 +1,26 @@
-import React from 'react'
-
 export const dataProjects = () => {
     const dataProjectsObj = [{
         id: 'Project1',
-        title: 'Project 1',
-        description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptatum.',
-        image: 'https://source.unsplash.com/random/?fruit',
-        url: 'https://source.unsplash.com/random/?fruit'
+        title: 'Spotify Clone LP - HTML, CSS, JS',
+        description: 'A landing page clone of Spotify built with HTML, CSS, and JS, showcasing a sleek and modern design and an intuitive user interface.',
+        image: 'https://source.unsplash.com/random/?spotify',
+        url: 'https://freitas-ma.github.io/spotify_lp_clone/'
     },
     {
         id: 'Project2',
-        title: 'Project 2',
-        description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptatum.',
-        image: 'https://source.unsplash.com/random/?fruit',
-        url: 'https://source.unsplash.com/random/?fruit'
+        title: 'NoTube - a YouTube clone - React, RapidAPI, Axios',
+        description: 'A YouTube clone built with React, RapidAPI, and Axios, showcasing a sleek and modern design and an intuitive user interface.',
+        image: 'https://source.unsplash.com/random/?youtube',
+        url: 'https://youtube-clone-app-sink-fqbwg4od9-freitas-ma.vercel.app/'
     },
     {
         id: 'Project3',
-        title: 'Project 3',
-        description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptatum.',
-        image: 'https://source.unsplash.com/random/?fruit',
-        url: 'https://source.unsplash.com/random/?fruit'
-    },
-    {
-        id: 'Project4',
-        title: 'Project 4',
-        description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptatum.',
-        image: 'https://source.unsplash.com/random/?fruit',
-        url: 'https://source.unsplash.com/random/?fruit'
-    },
-    {
-        id: 'Project5',
-        title: 'Project 5',
-        description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptatum.',
-        image: 'https://source.unsplash.com/random/?fruit',
-        url: 'https://source.unsplash.com/random/?fruit'
-    },
-    {
-        id: 'Project6',
-        title: 'Project 6',
-        description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptatum.',
-        image: 'https://source.unsplash.com/random/?fruit',
-        url: 'https://source.unsplash.com/random/?fruit'
-    }]
+        title: 'Project Mario',
+        description: 'A Landing Page built with HTML, CSS, and JS, showcasing a simple and modern presentation of a Mario Movie.',
+        image: 'https://source.unsplash.com/random/?mario_movie',
+        url: 'https://freitas-ma.github.io/projeto_mario/'
+    }
+]
     
     return dataProjects;
 }

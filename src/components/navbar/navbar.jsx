@@ -36,12 +36,12 @@ const Navbar = () => {
       <div className="container">
         {/* <!-- Logo --> */}
         <h1 id="logo">
-          <img src={devLogo} alt="Logo" />
+          <img src={devLogo} alt="Developer Logo" />
         </h1>
         {/* <!-- Navbar links --> */}
         <ul className={`nav-menu ${active ? "active" : ""}`}>
           <li>
-            <a className="nav-link" href="#" onClick={closeMenu}>
+            <a className="nav-link" href="/about" onClick={closeMenu}>
               About-me
             </a>
           </li>
@@ -58,7 +58,7 @@ const Navbar = () => {
 
           <li>
             <a id="resume" className="nav-link btn btn-primary" href="#">
-              RESUME <img id="arrow" src={arrow} alt="Arrow" />
+              RESUME <img id="arrow" src={arrow} alt="Arrow Icon" />
             </a>
           </li>
 
@@ -71,8 +71,8 @@ const Navbar = () => {
               checked={theme === "dark"}
             />
             <label className="toggle-icons" htmlFor="switch">
-              <img className="moon" src={moon} />
-              <img className="sun" src={sun} />
+              <img className="moon" src={moon} alt="Moon Icon" />
+              <img className="sun" src={sun} alt="Sun Icon" />
             </label>
           </div>
         </ul>

@@ -6,8 +6,8 @@ import Works from './pages/My_work/works.jsx'
 import Contact from './pages/Contact/contacts.jsx'
 import Footer from './pages/footer/footer.jsx'
 
-import Styles from './Styles/style.css'
-import Utilities from './Styles/utilities.css'
+import './Styles/style.css'
+import './Styles/utilities.css'
 
 
 
