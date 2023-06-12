@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
-import devLogo from "../../assets/favicon/dev.svg";
-import moon from "../../assets/moon-regular.svg";
-import sun from "../../assets/sun-solid.svg";
+import devLogo from "../../assets/favicon/male-programmer-svgrepo-com.svg";
+import moon from "../../assets/moon-svgrepo-com.svg";
+import sun from "../../assets/sun-svgrepo-com.svg";
 import ModalCV from "../modal/ModalCV";
 
 
