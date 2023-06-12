@@ -19,13 +19,6 @@ export const dataProjects = () => {
         description: 'A Landing Page built with HTML, CSS, and JS, showcasing a simple and modern presentation of a Mario Movie.',
         image: 'https://source.unsplash.com/random/?mario/',
         url: 'https://freitas-ma.github.io/projeto_mario/'
-    },
-    {
-        id: 'Project4',
-        title: 'Project Mario',
-        description: 'A Landing Page built with HTML, CSS, and JS, showcasing a simple and modern presentation of a Mario Movie.',
-        image: 'https://source.unsplash.com/random/?nintendo/',
-        url: 'https://freitas-ma.github.io/projeto_mario/'
     }
 ]
     
