@@ -1,4 +1,4 @@
-import homeGif from '../../assets/home.gif'
+import homeGif from '../../assets/programer.gif'
 import { isElementVisible } from '../../components/functions'
 import { useState, useEffect, useRef } from 'react';
 
