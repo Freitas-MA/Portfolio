@@ -44,17 +44,15 @@ export default function Home() {
 
   return (
     <div id='hero' ref={heroRef}>
-      <section className={`header-container`}
-      >
+      <section className={`header-container`}>
         <div className='hero-profile'>
           <div className={`profile ${isVisible ? 'popRight' : ''}`}>
           <img src={homeGif} alt="" />
           </div>
 
           <div className={`content-text ${isVisible ? 'popLeft' : ''}`}>
-            <h2>Hi I&apos;m Marcos Freitas - Frontend Developer</h2>
+            <h2>Hi, I&apos;m Marcos Freitas - Frontend Developer</h2>
             <h3>I&apos;m able to deal with your projects and deliver a very good result in a short time!</h3>
-
             <p>
               Skilled and passionate web developer, I possess a solid foundation in HTML, CSS, and JavaScript, and excel at
               problem-solving, clear communication, and collaboration with stakeholders.

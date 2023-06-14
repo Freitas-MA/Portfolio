@@ -224,10 +224,11 @@ body {
 /* Header Container */
 .header-container {
   display: flex;
-  height: 65vh;
+  height: 100%;
   flex-direction: column;
   justify-content: center;
   margin-top: 8rem;
+  padding-bottom: 4rem;
   border-bottom: 1px solid var(--bg-secondary);
 }
 .hero-profile {
@@ -776,6 +777,17 @@ body {
 }
 
 @media (max-width: 600px) {
+  .hero-profile {
+    display: block;
+    height: 80%;
+  }
+  #connect-btn {
+    height: 20%;
+  }
+  .content-text {
+    width: 100%;
+    padding: 1rem;
+  }
   .project {
     display: grid;
     grid-template-columns: 1fr;
