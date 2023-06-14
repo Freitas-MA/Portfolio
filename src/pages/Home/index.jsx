@@ -63,22 +63,22 @@ export default function Home() {
       </section>
 
       <div className={`techIcons`}>
-        <div className={isVisible ? 'popUp' : ''}>
+        <div>
           <i className="devicon devicon-html5-plain"></i>
         </div>
-        <div className={isVisible ? 'popUp' : ''}>
+        <div>
           <i className="devicon devicon-css3-plain"></i>
         </div>
-        <div className={isVisible ? 'popUp' : ''}>
+        <div>
           <i className="devicon devicon-bootstrap-plain"></i>
         </div>
-        <div className={isVisible ? 'popUp' : ''}>
+        <div>
           <i className="devicon devicon-javascript-plain"></i>
         </div>
-        <div className={isVisible ? 'popUp' : ''}>
+        <div>
           <i className="devicon devicon-react-original"></i>
         </div>
-        <div className={isVisible ? 'popUp' : ''}>
+        <div>
           <i className="devicon devicon-nextjs-original"></i>
         </div>
       </div>

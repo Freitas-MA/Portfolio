@@ -125,7 +125,7 @@ body {
 }
 #resume > span > img {
   width: 15px;
-  margin-right: 0.5rem;
+  margin-left: 0.6em;
   animation: arrow-bounce 0.5s infinite alternate;
 }
 #resume:hover {
@@ -325,16 +325,13 @@ body {
 .header-container > .btn {
   margin: 0 auto;
   margin-top: 1rem;
-  transform: scale(0.8);
+  scale: 1.5;
 }
 .header-container > .btn:hover {
-  transform: scale(1);
+  scale: 1.8;
+  transition: 0.2s ease-in-out;
 }
-#connect-btn {
-  margin: 0 auto;
-  margin-top: 1rem;
-  transform: scale(0.8);
-}
+
 .techIcons {
   display: flex;
   flex-wrap: wrap;
@@ -343,17 +340,19 @@ body {
   width: 70%;
   margin: 5rem auto;
   font-size: 5em;
+  animation: popUp 3s forwards !important;
+}
+.techIcons > div > i {
+  box-shadow: 0 5px 10px var(--bg-secondary);
+  border-radius: 50%;
+  padding: 1rem;
 }
 
-.techIcons div {
-  transform: scale(0);
-  transition: 0.3s ease-in-out;
+.techIcons > div:hover {
+  scale: 1.2;
+  transition: 0.2s ease-in-out;
 }
 
-.techIcons div:hover {
-  transform: scale(1);
-  animation: bounce 1s infinite alternate !important;
-}
 .popUp {
   animation: popUp 1.5s forwards !important;
 }
@@ -368,18 +367,7 @@ body {
     transform: scale(0.8);
   }
 }
-.techIcons div i {
-  box-shadow: 0 5px 10px var(--bg-secondary);
-  border-radius: 50%;
-  padding: 1rem;
-}
 
-.division {
-  width: 100%;
-  height: 2px;
-  background-color: var(--card-background);
-  margin: 2.5rem 0;
-}
 /* Projects */
 /* flip card project */
 /* The flip card container - set the width and height to whatever you want. We have added the border property to demonstrate that the flip itself goes out of the box on hover (remove perspective if you don't want the 3D effect */
@@ -693,7 +681,7 @@ body {
 @media (max-width: 768px) {
 }
 
-@media (max-width: 670px) {
+@media (max-width: 688px) {
   .contact-form {
     margin: 40px 0;
     height: 100%;
@@ -773,6 +761,10 @@ body {
 
   .hamburger.active .bar:nth-child(3) {
     transform: translateY(-8px) rotate(-45deg);
+  }
+  .content-text {
+    width: 90%;
+    padding: 1rem;
   }
 }
 
