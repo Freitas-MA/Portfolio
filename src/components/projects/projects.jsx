@@ -5,6 +5,8 @@ const Projects = () => {
 
     return (
         <div id="projects">
+            <h1>Projects</h1>
+            <p>Here are some of my projects. Click on the card to see the live version.</p>
             <div className='project'>
             {projects.map((item) => (
                 <div className='flip-card' key={item.id}>
@@ -22,8 +24,8 @@ const Projects = () => {
                         </div>
                     </div>
                 </div>
-            ))}
-        </div>
+                ))}
+            </div>
         </div>
     )
 }

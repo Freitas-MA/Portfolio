@@ -42,27 +42,6 @@ h2::selection {
 .btn-primary:hover {
   background: var(--secondary-color);
 }
-#resume {
-  padding-right: 3rem;
-}
-#arrow {
-  position: absolute;
-  width: 20px;
-  height: 20px;
-  margin-left: 0.5rem;
-  animation: arrow 1s infinite;
-}
-@keyframes arrow {
-  0% {
-    transform: translateX(0);
-  }
-  50% {
-    transform: translateX(3px);
-  }
-  100% {
-    transform: translateX(0);
-  }
-}
 
 /* Dark mode toggle */
 #switch {
@@ -74,6 +53,7 @@ h2::selection {
   justify-content: space-between;
   align-items: center;
   cursor: pointer;
+  
 }
 
 .toggle-icons > img {
@@ -89,7 +69,7 @@ h2::selection {
 .sun {
   display: none;
   transform: rotate(10deg);
-  filter: invert(1);
+  scale: 1.4;
 }
 
 #switch:checked + .toggle-icons .moon {
@@ -101,7 +81,6 @@ h2::selection {
   display: block;
   transform: rotate(100deg);
   animation: spinSun 1s linear;
-  color: darkorange;
 }
 
 @keyframes spinSun {
@@ -114,36 +93,6 @@ h2::selection {
   to { transform: rotate(360deg); }
 }
 
-/* Header Container */
-.header-container {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  margin-top: 8rem;
-  padding: 1rem;
-}
-
-.header-container > div {
-  margin-top: 1rem;
-}
-
-.content-text {
-  text-align: center;
-  margin: 1.5rem 0;
-}
-
-.content-text h2 {
-  font-size: 3rem;
-  line-height: 1.2;
-  transition: 0.2s ease-in-out;
-}
-
-.content-text p {
-  padding: 0.5rem;
-  margin: 0 auto;
-  max-width: 700px;
-}
 
 /* Project cards */
 .card {
@@ -154,26 +103,6 @@ h2::selection {
   transition: 0.4s ease-in-out;
   cursor: pointer;
 }
-
-.card a {
-  color: #ffffff;
-  transition: 0.25s ease-in-out;
-  font-size: 1.1rem;
-  margin-right: 0.3rem;
-}
-
-.card a:hover {
-  color: var(--primary-color);
-}
-
-.card:hover {
-  box-shadow: inset 0 100px 1000px 10px rgba(0, 0, 0, 0.8);
-}
-
-.card:hover .project-info {
-  opacity: 1;
-}
-
 
 /* Media Queries */
 @media (max-width: 768px) {
