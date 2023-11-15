@@ -1,6 +1,7 @@
 import homeGif from '../../assets/programer.gif'
 import { isElementVisible } from '../../components/functions'
 import { useState, useEffect, useRef } from 'react';
+import './Home.css'
 
 export default function Home() {
   const [isVisible, setIsVisible] = useState(false);

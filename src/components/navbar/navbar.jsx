@@ -3,6 +3,7 @@ import devLogo from "../../assets/favicon/male-programmer-svgrepo-com.svg";
 import moon from "../../assets/moon-regular.svg";
 import sun from "../../assets/sun.svg";
 import ModalCV from "../modal/ModalCV";
+import './navbar.css'
 
 
 const Navbar = () => {

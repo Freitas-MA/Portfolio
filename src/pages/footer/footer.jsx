@@ -1,6 +1,7 @@
 import React from "react";
 import linkedinIcon from "../../assets/linkedin-icon.svg";
 import githubIcon from "../../assets/github-icon.svg";
+import './Footer.css'
 
 export default function Footer() {
   return (

@@ -1,4 +1,5 @@
 import { dataProjects } from './dataProjects';
+import './Projects.css'
 
 const Projects = () => {
     const projects = dataProjects(); // Call the dataProjects function to get the array of projects
