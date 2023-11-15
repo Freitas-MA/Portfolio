@@ -2,9 +2,12 @@ import { useState, useRef, useEffect } from "react";
 import arrow from "../../assets/arrow-right-solid.svg";
 import MarcosFreitas from "./MarcosFreitas.pdf";
 
-function ModalCV() {
+export function useModal() {
     const [showModal, setShowModal] = useState(false);
     const modalRef = useRef(null);
+    const buttonRef = useRef(null);
+
+    console.log(showModal)
 
     const handleCloseModal = () => {
         setShowModal(false);
@@ -20,6 +23,12 @@ function ModalCV() {
         }
     };
 
+    const triggerButtonClick = () => {
+        setShowModal(!showModal);
+        console.log('clicked')
+    };
+    
+
     useEffect(() => {
         document.addEventListener("mousedown", handleClickOutside);
         return () => {
@@ -27,9 +36,16 @@ function ModalCV() {
         };
     }, []);
 
+
+    return { showModal, buttonRef, modalRef, handleCloseModal, handleOpenModal, triggerButtonClick };
+}
+
+function ModalCV() {
+    const { showModal, buttonRef, modalRef, handleCloseModal, triggerButtonClick } = useModal();
+
     return (
         <>
-            <button id="resume" className="nav-link btn btn-primary" onClick={handleOpenModal}><span>RESUME <img src={arrow} alt="arrow" /></span></button>
+            <button id="resume" className="nav-link btn btn-primary" onClick={triggerButtonClick} ref={buttonRef}><span>RESUME <img src={arrow} alt="arrow" /></span></button>
             {showModal && (
                 <div id="modal">
                     <div id="modal-content" ref={modalRef}>

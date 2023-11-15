@@ -18,7 +18,7 @@ const Projects = () => {
                         <div className="flip-card-back">
                             <img src={item.image} alt="background" />
                             <div className="text-back">
-                                <h1>{item.title}</h1>
+                                <h2>{item.title}</h2>
                                 <p>{item.description}</p>
                                 <a href={item.url} target="_blank" rel="noopener noreferrer">Live View</a>
                             </div>

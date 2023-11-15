@@ -9,9 +9,9 @@
   height: 100%;
   flex-direction: column;
   justify-content: center;
+  /* align-items: center; */
   margin-top: 8rem;
   padding-bottom: 4rem;
-  border-bottom: 1px solid var(--bg-secondary);
 }
 .hero-profile {
   display: flex;
@@ -81,7 +81,7 @@
   max-width: 700px;
 }
 .profile > h1 {
-  font-size: 2.5rem;
+  font-size: 3.5rem;
   margin-bottom: 1rem;
 }
 
@@ -103,14 +103,28 @@
   }
 }
 
-.header-container > .btn {
-  margin: 0 auto;
+.btn-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+
+  gap: 10rem;
+}
+
+.btn-container > .btn {
   margin-top: 1rem;
   scale: 1.5;
 }
-.header-container > .btn:hover {
+.btn-container > .btn:hover {
   scale: 1.8;
   transition: 0.2s ease-in-out;
+}
+
+.btn-container > .btn > .modalCVButton {
+background-color: transparent;
+border: none;
+color: var(--text-color-two);
 }
 
 .techIcons {
@@ -127,6 +141,11 @@
   box-shadow: 0 5px 10px var(--bg-secondary);
   border-radius: 50%;
   padding: 1rem;
+}
+.techIcons > div > p {
+  font-size: 1.2rem;
+  margin-top: 1rem;
+  text-align: center;
 }
 
 .techIcons > div:hover {
@@ -159,10 +178,6 @@
   .content-text {
     width: 100%;
     padding: 1rem;
-  }
-  .project {
-    display: grid;
-    grid-template-columns: 1fr;
   }
 
   .header-container .btn {
