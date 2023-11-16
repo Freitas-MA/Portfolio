@@ -6,6 +6,7 @@ export function useModal() {
     const [showModal, setShowModal] = useState(false);
     const modalRef = useRef(null);
     const buttonRef = useRef(null);
+    
 
     console.log(showModal)
 
@@ -17,16 +18,21 @@ export function useModal() {
         setShowModal(true);
     };
 
-    const handleClickOutside = (event) => {
-        if (modalRef.current && !modalRef.current.contains(event.target)) {
-            setShowModal(false);
-        }
+    const modalSwitch = () => {
+        setShowModal(!showModal);
     };
 
-    const triggerButtonClick = () => {
-        setShowModal(!showModal);
-        console.log('clicked')
+    const handleClickOutside = (event) => {
+        if (modalRef.current && !modalRef.current.contains(event.target) && !buttonRef.current.contains(event.target)) {
+            setShowModal(false);
+        }
+        
     };
+
+    useEffect(() => {
+        showModal ? (document.body.style.overflow = "hidden") : (document.body.style.overflow = "unset");
+        showModal ? (document.getElementById("modal").style.display = "flex") : (document.getElementById("modal").style.display = "none");
+    }, [showModal]);
     
 
     useEffect(() => {
@@ -37,25 +43,25 @@ export function useModal() {
     }, []);
 
 
-    return { showModal, buttonRef, modalRef, handleCloseModal, handleOpenModal, triggerButtonClick };
+    return { showModal, buttonRef, modalRef, modalSwitch};
 }
 
 function ModalCV() {
-    const { showModal, buttonRef, modalRef, handleCloseModal, triggerButtonClick } = useModal();
+    const { showModal, buttonRef, modalRef, modalSwitch } = useModal();
 
     return (
         <>
-            <button id="resume" className="nav-link btn btn-primary" onClick={triggerButtonClick} ref={buttonRef}><span>RESUME <img src={arrow} alt="arrow" /></span></button>
-            {showModal && (
+            <button id="resume" className="nav-link btn btn-primary" onClick={modalSwitch} ><span>RESUME <img src={arrow} alt="arrow" /></span></button>
+            
                 <div id="modal">
-                    <div id="modal-content" ref={modalRef}>
-                        <button id="close-modal" onClick={handleCloseModal}>X</button>
+                    <div id="modal-content">
+                        <button id="close-modal" onClick={modalSwitch}>X</button>
                         <div className="embedPDF">
                             <embed src={MarcosFreitas} type="application/pdf" width="100%" height="100%" />
                         </div>
                     </div>
                 </div>
-            )}
+           
         </>
     );
 }

@@ -9,7 +9,7 @@ export default function Home() {
   const [isVisible, setIsVisible] = useState(false);
   const heroRef = useRef(null);
 
-  const { triggerButtonClick } = useModal();
+  const { modalSwitch } = useModal();
 
   const handleScroll = () => {
     const elements = document.querySelectorAll(
@@ -41,8 +41,6 @@ export default function Home() {
         setIsVisible(true);
       }
     };
-
-    
 
     handleLoad();
 
@@ -77,19 +75,15 @@ export default function Home() {
             </p>
           </div>
         </div>
-        <div className="btn-container"> 
+        <div className="btn-container">
           <a
             href="#contact"
             className={`btn btn-secondary ${isVisible ? "popUp" : ""}`}
           >
             Connect With Me
           </a>
-          <span
-            className={`btn btn-secondary ${isVisible ? "popUp" : ""}`}
-            onClick={triggerButtonClick}
-          >
-            {console.log(triggerButtonClick)}
-            <button onClick={triggerButtonClick}>Teste</button>
+          <span className={`btn btn-secondary ${isVisible ? "popUp" : ""}`} onClick={modalSwitch}>
+            Checkout my resume!
           </span>
         </div>
       </section>
