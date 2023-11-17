@@ -95,6 +95,13 @@
   margin-bottom: 1rem;
 }
 
+@media (max-width: 688px) {
+  .profile > img {
+    width: 250px;
+
+  }
+}
+
 @keyframes bounce {
   from {
     transform: translateY(0px);
@@ -121,17 +128,13 @@
   scale: 1.5;
   transition: 0.2s ease-in-out;
   cursor: pointer;
+  color: var(--text-color-two);
 }
 .btn-container > .btn:hover {
   scale: 1.8;
   transition: 0.2s ease-in-out;
 }
 
-.btn-container > .btn > .modalCVButton {
-background-color: transparent;
-border: none;
-color: var(--text-color-two);
-}
 
 .techIcons {
   display: flex;
@@ -190,4 +193,9 @@ color: var(--text-color-two);
     border-radius: 5px;
     width: 80%;
   }
+
+  .btn-container {
+    gap: 3rem;
+  }
+  
 }

@@ -40,6 +40,7 @@
 html {
   font-size: 100%;
   scroll-behavior: smooth;
+  overflow-x: hidden;
 }
 
 /* Reset default styling */
@@ -71,10 +72,6 @@ body {
   align-items: center;
   justify-content: center;
 
-  overflow-x: hidden;
-
-
-  
 }
 
 h1{

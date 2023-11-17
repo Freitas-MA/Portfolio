@@ -1,22 +1,34 @@
-import React from 'react'
-import ReactDOM from 'react-dom/client'
-import Navbar from './components/navbar/navbar.jsx'
-import Index from './pages/Home/index.jsx'
-import Works from './pages/My_work/works.jsx'
-import Contact from './pages/Contact/contacts.jsx'
-import Footer from './pages/footer/footer.jsx'
+import React from "react";
+import ReactDOM from "react-dom/client";
 
-import './Styles/style.css'
-import './Styles/utilities.css'
+import App from "./App.jsx";
+import "./Styles/style.css";
+import "./Styles/utilities.css";
+import Home from "./pages/Home/Home.jsx";
+
+import { createBrowserRouter, RouterProvider, Route } from "react-router-dom";
+
+const router = createBrowserRouter([
+  {
+    path: "/",
+    element: <App />,
+    // errorElement: <Error404 />,
+    children: [
+      { path: "/", element: <Home /> },
+    //   { path: "/beatriz-freitas", element: <BeatrizFreitas /> },
+    //   { path: "/consultas", element: <Consultas /> },
+    //   { path: "/contato", element: <Contact /> },
+    //   { path: "/consultas/:id", element: <ConsultasItem /> },
+
+    //   { path: "*", element: <Error404 /> },
+    ],
+  },
+]);
 
 
-
-ReactDOM.createRoot(document.getElementById('root')).render(
+ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>
-    <Navbar />
-    <Index/>
-    <Works />
-    <Contact />
-    <Footer />
-  </React.StrictMode>,
-)
+    <RouterProvider router={router}>
+      <Route path="/" element={<App />} />
+    </RouterProvider>  </React.StrictMode>
+);

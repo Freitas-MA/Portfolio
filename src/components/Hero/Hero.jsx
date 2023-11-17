@@ -1,11 +1,11 @@
 import homeGif from "../../assets/programer.gif";
-import { isElementVisible } from "../../components/functions";
+import { isElementVisible } from "../functions";
 import { useState, useEffect, useRef } from "react";
-import HeroTypewriter from "../../components/HeroTypewriter";
-import "./Home.css";
-import { useModal } from "../../components/modal/ModalCV";
+import HeroTypewriter from "./HeroTypewriter";
+import "./Hero.css";
+import { useModal } from "../modal/ModalCV";
 
-export default function Home() {
+export default function Hero() {
   const [isVisible, setIsVisible] = useState(false);
   const heroRef = useRef(null);
 
@@ -80,9 +80,12 @@ export default function Home() {
             href="#contact"
             className={`btn btn-secondary ${isVisible ? "popUp" : ""}`}
           >
-            Connect With Me
+            <span>Connect With Me</span>
           </a>
-          <span className={`btn btn-secondary ${isVisible ? "popUp" : ""}`} onClick={modalSwitch}>
+          <span
+            className={`btn btn-secondary ${isVisible ? "popUp" : ""}`}
+            onClick={modalSwitch}
+          >
             Checkout my resume!
           </span>
         </div>

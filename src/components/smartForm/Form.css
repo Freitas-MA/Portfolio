@@ -1,15 +1,16 @@
 #contact {
+  margin-top: 10vh;
   padding: 25vh 0 0 0;
+  background-color: transparent;
 }
 .form {
   display: flex;
   align-items: center;
   justify-content: center;
   height: max-content;
-  background: var(--bg-primary);
 }
 .contact-form {
-  width: 100%;
+  width: 90%;
   max-width: 1080px;
   background: var(--bg-primary);
   border-radius: 10px;

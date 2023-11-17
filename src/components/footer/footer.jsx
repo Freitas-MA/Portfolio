@@ -8,7 +8,7 @@ export default function Footer() {
     <section className="footer">
       <footer id="footer">
         <div className="container">
-          <a href="mailto:freitas.ma.1993@gmail.com">
+          <a href="mailto:freitas.ma.1993@gmail.com" target="__blank">
             freitas.ma.1993@gmail.com
           </a>
 
@@ -31,7 +31,7 @@ export default function Footer() {
 
           <p>
             Copyright &copy; Marcos Freitas <span id="datee"></span>,
-            All rights reserved
+            All rights reserved --V.4.0--
           </p>
         </div>
       </footer>

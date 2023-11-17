@@ -13,7 +13,7 @@ const Projects = () => {
                 <div className='flip-card' key={item.id}>
                     <div className="flip-card-inner">
                         <div className="flip-card-front">
-                            <img src={item.image} alt="Avatar" style={{ width: '300px', height: '300px' }} />
+                            <img src={item.image} alt="Avatar"/>
                         </div>
                         <div className="flip-card-back">
                             <img src={item.image} alt="background" />

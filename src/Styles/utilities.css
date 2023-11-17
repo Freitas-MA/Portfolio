@@ -11,6 +11,12 @@
   padding: 0rem 5rem;
 }
 
+@media (max-width: 688px) {
+  .container {
+    padding: 0rem 1rem;
+  }
+}
+
 h1::selection,
 h2::selection {
   color: #111;
