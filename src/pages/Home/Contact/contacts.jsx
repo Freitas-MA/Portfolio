@@ -1,4 +1,4 @@
-import Form from '../../components/smartForm/form.jsx';
+import Form from '../../../components/smartForm/form.jsx';
 
 export default function Contact() {
   return (
@@ -14,7 +14,10 @@ export default function Contact() {
             <div className="email details">
               <i className="fas fa-envelope"></i>
               <div className="topic">Email</div>
-              <div className="text-one">freitas.ma.1993@gmail.com</div>
+              <div className="text-one">
+                <a href="mailto:freitas.ma.1993@gmail.com" target="_blank" rel="noopener noreferrer">
+                freitas.ma.1993@gmail.com </a>
+              </div>
             </div>
           </div>
           <div className="right-side">
