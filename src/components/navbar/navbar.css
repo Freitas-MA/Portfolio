@@ -162,7 +162,8 @@
     .navbar .nav-menu {
       display: none;
       position: absolute;
-      right: 20px;
+      left: 100%;
+      transform: translateX(-110%);
       top: 5rem;
       flex-direction: column;
       width: calc(80% - 10px);
@@ -170,9 +171,11 @@
       box-shadow: var(--shadow);
       padding: 2rem;
       border-radius: 5px;
-      align-items: flex-start;
+      align-items: center;
+      text-align: center;
       opacity: 0.1;
       transition: ease-in-out 0.8s;
+      gap: 1rem;
 
     }
   
