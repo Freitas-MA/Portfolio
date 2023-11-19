@@ -160,9 +160,10 @@
         position: relative;
     }
     .navbar .nav-menu {
+      display: none;
       position: absolute;
-      right: -150vw;
-      top: 4.5rem;
+      right: 20px;
+      top: 5rem;
       flex-direction: column;
       width: calc(80% - 10px);
       transition: 0.3s;
@@ -170,6 +171,9 @@
       padding: 2rem;
       border-radius: 5px;
       align-items: flex-start;
+      opacity: 0.1;
+      transition: ease-in-out 0.8s;
+
     }
   
     .navbar .btn {
@@ -178,7 +182,10 @@
     }
   
     .nav-menu.active {
+      transition: ease-in-out 0.8s;
+      display: flex;
       right: 20px;
+      opacity: 1;
     }
   
     .nav-menu .nav-link {

@@ -30,8 +30,10 @@
     perspective: 1000px;
     overflow: visible;
     border-radius: 10px;
-    width: 250px;
+    width: 300px;
+    min-width: 250px;
     height: 300px;
+    min-height: 300px;
     margin: auto;
   }
   
@@ -105,7 +107,21 @@
     margin-bottom: 0.5rem;
     color: var(--text-color);
   }
-  .text-back > p {
+
+  .text-back > div {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: end;
+    margin-bottom: 0.5rem;
+    min-width: 100%;
+
+    position: absolute;
+    bottom: 1rem;
+    left: 0;
+    
+  }
+  .text-back > div > p {
     font-size: 0.8rem;
     color: var(--text-color);
   }
