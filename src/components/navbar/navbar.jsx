@@ -37,14 +37,14 @@ const Navbar = () => {
       <div className="container">
         {/* <!-- Logo --> */}
         <h1 id="logo">
-          <a href="#hero">
+          <a href="#">
           <img src={devLogo} alt="Developer Logo" />
           </a>
         </h1>
         {/* <!-- Navbar links --> */}
         <ul className={`nav-menu ${active ? "active" : ""}`}>
           <li>
-            <a className="nav-link" href="#hero" onClick={closeMenu}>
+            <a className="nav-link" href="#" onClick={closeMenu}>
               About
             </a>
           </li>
