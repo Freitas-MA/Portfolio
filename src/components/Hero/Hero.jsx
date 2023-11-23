@@ -1,11 +1,13 @@
 import homeGif from "../../assets/programer.gif";
 import { isElementVisible } from "../functions";
-import { useState, useEffect, useRef } from "react";
+import { useState, useEffect, useRef, Component } from "react";
 import HeroTypewriter from "./HeroTypewriter";
 import "./Hero.css";
 import { useModal } from "../modal/ModalCV";
 
-export default function Hero() {
+export default function Hero({props}) {
+
+  const { title, subtitle, image, description, buttons, icons } = props;
   const [isVisible, setIsVisible] = useState(false);
   const heroRef = useRef(null);
 
@@ -56,23 +58,23 @@ export default function Hero() {
       <section className={`header-container`}>
         <div className="hero-profile">
           <div className={`profile ${isVisible ? "popRight" : ""}`}>
-            <img src={homeGif} alt="" />
+            <img src={image.imageGif} alt={image.alt} />
           </div>
 
           <div className={`content-text ${isVisible ? "popLeft" : ""}`}>
-            <h1>Hi, I&apos;m Marcos Freitas </h1>
+            <h1>{title}</h1>
             <h2>
-              <HeroTypewriter />
+              <span className="subtitle">
+                <HeroTypewriter words={subtitle}/>
+              </span>
             </h2>
             <h3>
-              I&apos;m able to deal with your projects and deliver a very good
-              result in a short time!
+              <p>
+                {description.first}
+                <br />
+                {description.second}
+              </p>
             </h3>
-            <p>
-              Skilled and passionate web developer, I possess a solid foundation
-              in HTML, CSS, and JavaScript, and excel at problem-solving, clear
-              communication, and collaboration with stakeholders.
-            </p>
           </div>
         </div>
         <div className="btn-container">
@@ -80,42 +82,27 @@ export default function Hero() {
             href="#contact"
             className={`btn btn-secondary ${isVisible ? "popUp" : ""}`}
           >
-            <span>Connect With Me</span>
+            <span>{buttons.second}</span>
           </a>
           <span
             className={`btn btn-secondary ${isVisible ? "popUp" : ""}`}
             onClick={modalSwitch}
           >
-            Checkout my resume!
+            {buttons.first}
           </span>
         </div>
       </section>
 
       <div className={`techIcons`}>
-        <div>
-          <i className="devicon devicon-html5-plain"></i>
-          <p>HTML5</p>
-        </div>
-        <div>
-          <i className="devicon devicon-css3-plain"></i>
-          <p>CSS3</p>
-        </div>
-        <div>
-          <i className="devicon devicon-bootstrap-plain"></i>
-          <p>Bootstrap</p>
-        </div>
-        <div>
-          <i className="devicon devicon-javascript-plain"></i>
-          <p>Javascript</p>
-        </div>
-        <div>
-          <i className="devicon devicon-react-original"></i>
-          <p>ReactJS</p>
-        </div>
-        <div>
-          <i className="devicon devicon-nextjs-original"></i>
-          <p>NextJS</p>
-        </div>
+        {icons.map((icon, index) => (
+          <div
+            key={index}
+            className={`icon-container ${isVisible ? "animate" : ""}`}
+          >
+            <i className={icon.classes} title={icon.name}></i>
+            <p>{icon.name}</p>
+          </div>
+        ))}
       </div>
     </div>
   );
