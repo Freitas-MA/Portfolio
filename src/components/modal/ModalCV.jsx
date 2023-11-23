@@ -8,7 +8,6 @@ export function useModal() {
     const buttonRef = useRef(null);
     
 
-    console.log(showModal)
 
     const handleCloseModal = () => {
         setShowModal(false);
