@@ -1,4 +1,3 @@
-import homeGif from "../../assets/programer.gif";
 import { isElementVisible } from "../functions";
 import { useState, useEffect, useRef, Component } from "react";
 import HeroTypewriter from "./HeroTypewriter";
