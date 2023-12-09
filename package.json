@@ -24,7 +24,8 @@
     "react-icons": "^4.8.0",
     "react-router-dom": "^6.19.0",
     "react-simple-typewriter": "^5.0.1",
-    "safe-buffer": "^5.2.1"
+    "safe-buffer": "^5.2.1",
+    "styled-components": "^6.1.1"
   },
   "devDependencies": {
     "@emailjs/browser": "^3.11.0",

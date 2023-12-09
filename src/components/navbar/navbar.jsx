@@ -3,7 +3,7 @@ import devLogo from "../../assets/favicon/male-programmer-svgrepo-com.svg";
 import moon from "../../assets/moon-regular.svg";
 import sun from "../../assets/sun.svg";
 import ModalCV from "../modal/ModalCV";
-import './navbar.css'
+import { StyledNavbar } from "./StyledNavbar";
 
 
 const Navbar = () => {
@@ -33,7 +33,7 @@ const Navbar = () => {
   };
 
   return (
-    <nav className="navbar">
+    <StyledNavbar>
       <div className="container">
         {/* <!-- Logo --> */}
         <h1 id="logo">
@@ -84,7 +84,7 @@ const Navbar = () => {
           <span className="bar"></span>
         </div>
       </div>
-    </nav>
+    </StyledNavbar>
   );
 };
 
