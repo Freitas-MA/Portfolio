@@ -1,11 +1,10 @@
 import { isElementVisible } from "../functions";
 import { useState, useEffect, useRef, Component } from "react";
 import HeroTypewriter from "./HeroTypewriter";
-import "./Hero.css";
 import { useModal } from "../modal/ModalCV";
+import { StyledHero } from "./StyledHero";
 
-export default function Hero({props}) {
-
+export default function Hero({ props }) {
   const { title, subtitle, image, description, buttons, icons } = props;
   const [isVisible, setIsVisible] = useState(false);
   const heroRef = useRef(null);
@@ -53,7 +52,7 @@ export default function Hero({props}) {
   }, []);
 
   return (
-    <div id="hero" ref={heroRef}>
+    <StyledHero ref={heroRef}>
       <section className={`header-container`}>
         <div className="hero-profile">
           <div className={`profile ${isVisible ? "popRight" : ""}`}>
@@ -64,7 +63,7 @@ export default function Hero({props}) {
             <h1>{title}</h1>
             <h2>
               <span className="subtitle">
-                <HeroTypewriter words={subtitle}/>
+                <HeroTypewriter words={subtitle} />
               </span>
             </h2>
             <h3>
@@ -103,6 +102,6 @@ export default function Hero({props}) {
           </div>
         ))}
       </div>
-    </div>
+    </StyledHero>
   );
 }

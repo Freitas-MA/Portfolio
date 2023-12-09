@@ -7,9 +7,9 @@ export const StickySection = styled.section`
   width: 100vw;
   height: 100vh;
   z-index: -1;
-  background: var(--bg-primary);
+  background: transparent;
 `;
-
+// ! Criar um jogo aqui com as bolhas
 export const BubblesContainer = styled.div`
   position: absolute;
   width: 100%;
@@ -41,6 +41,13 @@ export const Bubble = styled.div`
   animation: ${BubbleAnimation} 10s infinite ease-in;
   background: #1bd6f7a6;
   border-radius: 50%;
+  transition: all 0.3s ease-in-out;
+
+  /* &:hover {
+    opacity: 1;
+    background-color: red;
+    opacity: 0.6;
+  } */
 
   &:nth-child(1) {
     width: 40px;
