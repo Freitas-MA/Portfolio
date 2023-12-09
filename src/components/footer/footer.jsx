@@ -40,7 +40,7 @@ export default function Footer() {
 
                 <FooterText>
                     Copyright &copy; Marcos Freitas <span id="datee"></span>,
-                    All rights reserved --V.4.0--
+                    All rights reserved --V.5.0--
                 </FooterText>
             </Container>
         </FooterContainer>
