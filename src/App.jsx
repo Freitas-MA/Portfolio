@@ -7,6 +7,7 @@ import "./Styles/style.css";
 import "./Styles/utilities.css";
 
 import { Outlet } from "react-router-dom";
+import Cookies from "./components/Cookies/Cookies.jsx";
 
 export default function App() {
   return (
@@ -16,6 +17,7 @@ export default function App() {
       <Footer />
       <SpeedInsights />
       <Analytics />
+      <Cookies />
     </>
   );
 }
