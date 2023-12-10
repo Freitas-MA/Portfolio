@@ -6,7 +6,8 @@ const StyledCookies = styled.div`
     .cookie-banner {
         position: fixed;
         bottom: 2rem;
-        left: 2rem;
+        left: 50%;
+        transform: translateX(-50%);
         width: 300px;
         background: #a00000eb;
         border-radius: 25px;
@@ -15,6 +16,7 @@ const StyledCookies = styled.div`
         display: flex;
         justify-content: space-between;
         align-items: center;
+        z-index: 1000;
 
         & button {
             background: #fff;
@@ -54,7 +56,6 @@ const Cookies = () => {
                     <button onClick={handleAccept}>Accept</button>
                 </div>
             )}
-            {/* Rest of the component */}
         </StyledCookies>
     );
 };

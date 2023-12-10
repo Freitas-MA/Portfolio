@@ -21,7 +21,7 @@ export const ProjectsContainer = styled.div`
 
   .project {
     display: flex;
-    flex-wrap: wrap;
+    flex-wrap: nowrap;
     justify-content: space-around;
     align-items: center;
     gap: 1rem;
@@ -33,7 +33,9 @@ export const ProjectsContainer = styled.div`
     & .front,
     .back {
       width: 300px;
+      min-width: 300px;
       height: 300px;
+      min-height: 300px;
       display: flex;
       flex-direction: column;
       justify-content: center;
@@ -44,14 +46,18 @@ export const ProjectsContainer = styled.div`
       transition: transform 0.8s ease-in-out;
       transform-style: preserve-3d;
       box-shadow: 05px 10px rgba(37, 37, 37, 0.5);
-
+      @media (max-width: 688px) {
+          margin: 15vh auto;
+        }
       &:hover {
         transform: translate(0, 0);
+
+
       }
     }
 
     & .front {
-      backdrop-filter: blur(5px);
+      backdrop-filter: blur(0px);
       z-index: 10;
       transform: translate(50%, 0%);
 
@@ -88,7 +94,7 @@ export const ProjectsContainer = styled.div`
     }
 
     & .back {
-      transform: translate(-50%, 5%);
+      transform: translate(-50%, 0%);
       opacity: 0.5;
 
       & img {
@@ -107,6 +113,27 @@ export const ProjectsContainer = styled.div`
       .back {
         transform: translate(0, 0);
         opacity: 1;
+      }
+    }
+    @media (max-width: 688px) {
+      & .front {
+        backdrop-filter: blur(5px);
+        z-index: 10;
+        transform: translate(52%, 0%);
+      }
+      & .back {
+        transform: translate(-52%, 0%);
+        opacity: 0.5;
+      }
+      &:hover {
+        .front {
+          transform: translate(48%, -45%);
+        }
+
+        .back {
+          transform: translate(-50%, 45%);
+          opacity: 1;
+        }
       }
     }
   }

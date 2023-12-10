@@ -69,9 +69,10 @@ export const StyledHero = styled.div`
       align-items: center;
       margin-top: 1rem;
       gap: 6rem;
+      padding: 0 4rem;
 
       .profile {
-        &.popRight {
+        & .popRight {
           animation: ${popRightAnimation} 1.2s forwards !important;
         }
 
@@ -81,7 +82,7 @@ export const StyledHero = styled.div`
         }
 
         > img {
-          width: 350px;
+          width: 270px;
           border-radius: 50%;
           animation: ${bounceAnimation} 1s infinite alternate;
           box-shadow: 0 5px 10px var(--bg-secondary);
@@ -90,7 +91,7 @@ export const StyledHero = styled.div`
       }
 
       .content-text {
-        width: 40%;
+        width: 100%;
         text-align: start;
         margin: 1.5rem 0;
         transform: translateX(-100vw);
@@ -141,6 +142,39 @@ export const StyledHero = styled.div`
         }
       }
     }
+    @media (max-width: 600px) {
+      margin-top: 1rem;
+      align-items: center;
+      justify-content: center;
+      .hero-profile {
+        display: block;
+        height: 80%;
+        padding: 0 1rem;
+        margin: 0 auto;
+        align-items: center;
+        justify-content: center;
+      }
+
+      #connect-btn {
+        height: 20%;
+      }
+
+      .content-text {
+        width: 100%;
+        padding: 1rem;
+      }
+
+      .header-container {
+        .btn {
+          border-radius: 5px;
+          width: 80%;
+        }
+      }
+
+      .btn-container {
+        gap: 3rem;
+      }
+    }
   }
 
   .techIcons {
@@ -175,30 +209,5 @@ export const StyledHero = styled.div`
 
   .popUp {
     animation: ${popUpAnimation} 1.5s forwards !important;
-  }
-
-  @media (max-width: 600px) {
-    .hero-profile {
-      display: block;
-      height: 80%;
-    }
-
-    #connect-btn {
-      height: 20%;
-    }
-
-    .content-text {
-      width: 100%;
-      padding: 1rem;
-    }
-
-    .header-container .btn {
-      border-radius: 5px;
-      width: 80%;
-    }
-
-    .btn-container {
-      gap: 3rem;
-    }
   }
 `;
