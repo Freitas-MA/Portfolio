@@ -5,7 +5,7 @@ export const ProjectsContainer = styled.div`
   width: 100%;
   max-width: 100vw;
   padding: 0vh 20vw;
-  padding-top: 20vh;
+  padding-top: 10vh;
 
   h1 {
     text-align: center;
@@ -22,13 +22,19 @@ export const ProjectsContainer = styled.div`
   .project {
     display: flex;
     flex-wrap: nowrap;
-    justify-content: space-around;
+    justify-content: center;
     align-items: center;
-    gap: 1rem;
-    /* width: auto; */
     height: 100%;
+    gap: 1rem;
     margin: 2rem auto;
     transition: transform 0.8s ease-in-out;
+    &:hover {
+      & .front, .back {
+        transform: translate(0, 0);
+        opacity: 1;
+      }
+
+      }
 
     & .front,
     .back {
@@ -49,17 +55,14 @@ export const ProjectsContainer = styled.div`
       @media (max-width: 688px) {
           margin: 15vh auto;
         }
-      &:hover {
-        transform: translate(0, 0);
 
-
-      }
     }
 
     & .front {
       backdrop-filter: blur(0px);
       z-index: 10;
-      transform: translate(50%, 0%);
+      transform: translate(48%, 0%);
+      backdrop-filter: blur(5px);
 
       & h3 {
         font-size: 1.5rem;
@@ -94,7 +97,7 @@ export const ProjectsContainer = styled.div`
     }
 
     & .back {
-      transform: translate(-50%, 0%);
+      transform: translate(-48%, 0%);
       opacity: 0.5;
 
       & img {
@@ -107,12 +110,12 @@ export const ProjectsContainer = styled.div`
 
     &:hover {
       .front {
-        transform: translate(0, 0);
+        /* transform: translate(30, 0); */
       }
 
       .back {
-        transform: translate(0, 0);
-        opacity: 1;
+        /* transform: translate(-30%, 0); */
+        /* opacity: 1; */
       }
     }
     @media (max-width: 688px) {

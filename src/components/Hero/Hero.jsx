@@ -1,7 +1,6 @@
 import { isElementVisible } from "../functions";
 import { useState, useEffect, useRef, Component } from "react";
 import HeroTypewriter from "./HeroTypewriter";
-import { useModal } from "../modal/ModalCV";
 import { StyledHero } from "./StyledHero";
 
 export default function Hero({ props }) {
@@ -9,7 +8,6 @@ export default function Hero({ props }) {
   const [isVisible, setIsVisible] = useState(false);
   const heroRef = useRef(null);
 
-  const { modalSwitch } = useModal();
 
   const handleScroll = () => {
     const elements = document.querySelectorAll(
@@ -61,11 +59,9 @@ export default function Hero({ props }) {
 
           <div className={`content-text ${isVisible ? "popLeft" : ""}`}>
             <h1>{title}</h1>
-            <h2>
-              <span className="subtitle">
-                <HeroTypewriter words={subtitle} />
-              </span>
-            </h2>
+            <h3>
+              <HeroTypewriter words={subtitle} />
+            </h3>
             <h3>
               <p>
                 {description.first}
@@ -84,7 +80,9 @@ export default function Hero({ props }) {
           </a>
           <span
             className={`btn btn-secondary ${isVisible ? "popUp" : ""}`}
-            onClick={modalSwitch}
+            onClick={() => {
+              document.getElementById("modal").style.display = "flex";
+            }}
           >
             {buttons.first}
           </span>

@@ -68,59 +68,6 @@ export const StyledNavbar = styled.nav`
       & :hover {
         cursor: pointer;
       }
-
-      #modal {
-        position: fixed;
-        top: 5vh;
-        left: 5vw;
-        padding: 1rem;
-        width: 90vw;
-        height: fit-content;
-        background-color: rgba(0, 0, 0, 0.5);
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        z-index: 100;
-        border: #565656 1px solid;
-        border-radius: 5px;
-
-        & #modal-content {
-          width: 100%;
-          max-width: 1080px;
-          height: 90vh;
-          background-color: var(--bg-primary);
-          padding: 2rem;
-          border-radius: 5px;
-          position: relative;
-
-          & .embedPDF {
-            width: 100%;
-            height: 100%;
-            border: none;
-            border-radius: 5px;
-            overflow: hidden;
-            margin: 0;
-            padding: 0;
-            background-color: var(--bg-primary);
-          }
-          & #close-modal {
-            position: absolute;
-            top: 10px;
-            right: 10px;
-            border: none;
-            background-color: transparent;
-            cursor: pointer;
-            color: var(--text-color);
-          }
-
-          & span {
-            display: flex;
-            font-size: 0.6rem;
-            justify-content: center;
-            margin-top: -20px;
-          }
-        }
-      }
     }
     .hamburger {
       margin-bottom: 0.1rem;
@@ -141,14 +88,13 @@ export const StyledNavbar = styled.nav`
   @media (max-width: 688px) {
     & .container {
       & .nav-menu {
-        display: flex;
+        display: none;
         position: absolute;
         left: 100%;
         transform: translateX(-110%);
         top: 5rem;
         flex-direction: column;
         width: 0px;
-        transition: 0.3s;
         box-shadow: var(--shadow);
         padding: 2rem;
         border-radius: 5px;
@@ -157,20 +103,25 @@ export const StyledNavbar = styled.nav`
         opacity: 0;
         transition: ease-in-out 0.8s;
         gap: 1rem;
+        z-index: -100;
       }
 
       & .hamburger {
         display: block;
         cursor: pointer;
         padding: 0.2rem 0.4rem;
-        border: 1px dotted gray;
+
+        &:hover {
+          background-color: lightblue;
+          border-radius: 5px;
+        }
       }
 
       .nav-menu.active {
+        display: flex;
         right: 50%;
         width: calc(80% - 10px);
         opacity: 1;
-
         & .nav-link {
           font-size: 0.9rem;
           margin: 0 0.2rem;

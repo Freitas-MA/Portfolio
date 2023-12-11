@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { styled } from 'styled-components'
 
-
 const StyledCookies = styled.div`
     .cookie-banner {
         position: fixed;
@@ -27,7 +26,16 @@ const StyledCookies = styled.div`
             cursor: pointer;
         }
     }
+
+    @media (max-width: 768px) {
+        .cookie-banner {
+            width: 90%;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+    }
 `;
+
 const Cookies = () => {
     const [showBanner, setShowBanner] = useState(false);
 

@@ -49,10 +49,10 @@ const popUpAnimation = keyframes`
 export const StyledHero = styled.div`
   display: flex;
   flex-direction: column;
-  max-width: 100vw;
+  max-width: 1080px;
   min-height: 100vh;
   height: 100%;
-  margin-top: 2rem;
+  margin: 2rem auto;
 
   .header-container {
     display: flex;
@@ -67,9 +67,8 @@ export const StyledHero = styled.div`
       flex-direction: row-reverse;
       justify-content: center;
       align-items: center;
-      margin-top: 1rem;
-      gap: 6rem;
-      padding: 0 4rem;
+      gap: 4rem;
+      padding: 0 3rem;
 
       .profile {
         & .popRight {
@@ -86,14 +85,13 @@ export const StyledHero = styled.div`
           border-radius: 50%;
           animation: ${bounceAnimation} 1s infinite alternate;
           box-shadow: 0 5px 10px var(--bg-secondary);
-          margin-bottom: 1rem;
         }
       }
 
       .content-text {
         width: 100%;
         text-align: start;
-        margin: 1.5rem 0;
+        margin: 1rem 0;
         transform: translateX(-100vw);
 
         &.popLeft {
@@ -112,7 +110,7 @@ export const StyledHero = styled.div`
         }
 
         p {
-          font-size: 1.2rem;
+          font-size: 1rem;
           padding: 0rem;
           margin: 1rem 0 0 0;
           max-width: 700px;

@@ -5,6 +5,7 @@ import App from "./App.jsx";
 import "./Styles/style.css";
 import "./Styles/utilities.css";
 import Home from "./pages/Home/Home.jsx";
+import About from "./pages/About/About.jsx";
 
 import { createBrowserRouter, RouterProvider, Route } from "react-router-dom";
 
@@ -15,11 +16,7 @@ const router = createBrowserRouter([
     // errorElement: <Error404 />,
     children: [
       { path: "/", element: <Home /> },
-    //   { path: "/beatriz-freitas", element: <BeatrizFreitas /> },
-    //   { path: "/consultas", element: <Consultas /> },
-    //   { path: "/contato", element: <Contact /> },
-    //   { path: "/consultas/:id", element: <ConsultasItem /> },
-
+      { path: "about", element: <About /> }, 
     //   { path: "*", element: <Error404 /> },
     ],
   },

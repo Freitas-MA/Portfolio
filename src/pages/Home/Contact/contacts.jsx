@@ -2,8 +2,8 @@ import Form from "../../../components/smartForm/form.jsx";
 import { StyledForm } from "./StyledForm.jsx";
 export default function Contact() {
   return (
-    <StyledForm>
-      <div id="contact" className="content">
+    <StyledForm id="contact">
+      <div className="content">
         <div className="left-side">
           <div className="phone details">
             <i className="fas fa-phone-alt"></i>
