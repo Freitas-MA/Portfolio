@@ -82,6 +82,7 @@ export default function Hero({ props }) {
             className={`btn btn-secondary ${isVisible ? "popUp" : ""}`}
             onClick={() => {
               document.getElementById("modal").style.display = "flex";
+              document.documentElement.style.overflow = "hidden";
             }}
           >
             {buttons.first}

@@ -6,6 +6,7 @@ export default function EmbedModal() {
 
 const closeModal = () => {
     document.getElementById("modal").style.display = "none";
+    document.documentElement.style.overflow = "auto";
   }
 
 

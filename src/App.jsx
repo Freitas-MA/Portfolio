@@ -13,7 +13,7 @@ export default function App() {
     <>
       <GlobalStyle />
       <Navbar />
-      <Outlet />
+      <Outlet id='App'/>
       <Footer />
       <SpeedInsights />
       <Analytics />
