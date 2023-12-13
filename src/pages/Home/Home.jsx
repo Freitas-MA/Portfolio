@@ -4,7 +4,7 @@ import Works from "./My_work/works.jsx";
 import Contact from "./Contact/contacts.jsx";
 import Background from "../../components/Background/Background";
 import { hero } from "../../assets/API/DataObjects";
-import EmbedModal from "../../components/modal/embedModal.jsx";
+import EmbedModal from "../../components/modal/EmbedModal.jsx";
 
 export default function Home() {
   return (
